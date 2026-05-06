@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+
+# Environment variables
+.env
+.env.local
+.env.production
+.env.*.local
+
+# Build output
+client/build/
+dist/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# IDE
+.vscode/
+.idea/
+
+# Uploads (user-generated, not needed in repo)
+server/uploads/thumbnails/*
+!server/uploads/thumbnails/.gitkeep

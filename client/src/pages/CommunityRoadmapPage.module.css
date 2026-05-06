@@ -1,0 +1,59 @@
+.page { min-height: 100vh; background: var(--bg-primary, #0f0f1a); }
+.center { display: flex; align-items: center; justify-content: center; height: 100vh; color: var(--text-secondary, #a0a0c0); font-size: 1.1rem; }
+.header { display: flex; align-items: center; justify-content: space-between; padding: 16px 32px; background: var(--bg-secondary, #1a1a2e); border-bottom: 1px solid rgba(255,255,255,0.08); position: sticky; top: 0; z-index: 10; }
+.backBtn { background: none; border: none; color: var(--text-secondary, #a0a0c0); cursor: pointer; font-size: 0.9rem; padding: 0; }
+.backBtn:hover { color: #fff; }
+.headerActions { display: flex; gap: 10px; }
+.likeBtn { padding: 8px 16px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.05); color: var(--text-secondary, #a0a0c0); cursor: pointer; font-size: 0.9rem; transition: all 0.2s; }
+.likeBtn:hover { background: rgba(239,68,68,0.1); border-color: rgba(239,68,68,0.3); color: #f87171; }
+.likeBtn.liked { background: rgba(239,68,68,0.12); border-color: rgba(239,68,68,0.4); color: #f87171; }
+.forkBtn { padding: 8px 18px; border-radius: 10px; border: none; background: linear-gradient(135deg, #6c63ff, #a855f7); color: #fff; cursor: pointer; font-size: 0.9rem; font-weight: 600; transition: opacity 0.2s; }
+.forkBtn:hover { opacity: 0.85; }
+.forkBtn:disabled { opacity: 0.5; cursor: not-allowed; }
+.container { max-width: 800px; margin: 0 auto; padding: 32px; }
+.main { display: flex; flex-direction: column; gap: 32px; }
+.banner { width: 100%; max-height: 300px; object-fit: cover; border-radius: 16px; }
+.titleSection {}
+.badges { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+.badge { padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; }
+.diffBeginner { background: rgba(34,197,94,0.15); color: #4ade80; }
+.diffIntermediate { background: rgba(251,191,36,0.15); color: #fbbf24; }
+.diffAdvanced { background: rgba(239,68,68,0.15); color: #f87171; }
+.catBadge { padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; background: rgba(108,99,255,0.15); color: #a78bfa; }
+.forkBadge { padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; background: rgba(236,72,153,0.15); color: #f472b6; }
+.title { font-size: 2rem; font-weight: 800; color: #fff; margin: 0 0 12px; line-height: 1.3; }
+.description { font-size: 1rem; color: var(--text-secondary, #a0a0c0); line-height: 1.7; margin: 0 0 20px; }
+.creator { display: flex; align-items: center; gap: 12px; cursor: pointer; padding: 12px; background: rgba(255,255,255,0.03); border-radius: 12px; border: 1px solid rgba(255,255,255,0.06); transition: all 0.2s; }
+.creator:hover { background: rgba(255,255,255,0.06); }
+.avatar { width: 40px; height: 40px; border-radius: 50%; background: linear-gradient(135deg, #6c63ff, #a855f7); display: flex; align-items: center; justify-content: center; font-size: 1rem; font-weight: 700; color: #fff; flex-shrink: 0; }
+.creatorName { font-weight: 700; color: #fff; font-size: 0.95rem; }
+.creatorBio { font-size: 0.82rem; color: var(--text-secondary, #a0a0c0); }
+.sectionTitle { font-size: 1.2rem; font-weight: 700; color: #fff; margin: 0 0 16px; }
+.stepCard { background: var(--bg-secondary, #1a1a2e); border-radius: 12px; border: 1px solid rgba(255,255,255,0.08); margin-bottom: 10px; overflow: hidden; }
+.stepHeader { display: flex; align-items: center; justify-content: space-between; padding: 16px 18px; cursor: pointer; transition: background 0.2s; }
+.stepHeader:hover { background: rgba(255,255,255,0.03); }
+.stepLeft { display: flex; align-items: center; gap: 14px; }
+.stepNum { width: 30px; height: 30px; border-radius: 50%; background: linear-gradient(135deg, #6c63ff, #a855f7); display: flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: 700; color: #fff; flex-shrink: 0; }
+.stepTitle { font-size: 0.95rem; font-weight: 600; color: #fff; margin: 0; }
+.stepToggle { color: var(--text-secondary, #a0a0c0); font-size: 0.8rem; }
+.stepBody { padding: 0 18px 18px; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 14px; }
+.stepDesc { color: var(--text-secondary, #a0a0c0); font-size: 0.9rem; line-height: 1.7; margin: 0 0 14px; }
+.resources strong { font-size: 0.85rem; color: #fff; display: block; margin-bottom: 8px; }
+.resources ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 6px; }
+.resources a { font-size: 0.85rem; color: #a78bfa; text-decoration: none; word-break: break-all; }
+.resources a:hover { text-decoration: underline; }
+.commentsSection {}
+.commentForm { display: flex; align-items: center; gap: 10px; margin-bottom: 20px; }
+.commentAvatar { width: 36px; height: 36px; border-radius: 50%; background: linear-gradient(135deg, #6c63ff, #a855f7); display: flex; align-items: center; justify-content: center; font-weight: 700; color: #fff; font-size: 0.85rem; flex-shrink: 0; }
+.commentInput { flex: 1; padding: 10px 14px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); color: #fff; font-size: 0.9rem; outline: none; }
+.commentInput:focus { border-color: #6c63ff; }
+.commentBtn { padding: 10px 18px; border-radius: 10px; border: none; background: linear-gradient(135deg, #6c63ff, #a855f7); color: #fff; cursor: pointer; font-size: 0.88rem; font-weight: 600; }
+.commentBtn:disabled { opacity: 0.5; cursor: not-allowed; }
+.noComments { color: var(--text-secondary, #a0a0c0); font-size: 0.9rem; text-align: center; padding: 24px 0; }
+.commentsList { display: flex; flex-direction: column; gap: 14px; }
+.comment { display: flex; gap: 12px; }
+.commentBody { flex: 1; background: rgba(255,255,255,0.03); border-radius: 12px; border: 1px solid rgba(255,255,255,0.06); padding: 12px 14px; }
+.commentAuthor { font-weight: 600; color: #fff; font-size: 0.88rem; margin-bottom: 4px; }
+.commentText { color: var(--text-secondary, #a0a0c0); font-size: 0.88rem; margin: 0 0 6px; line-height: 1.5; }
+.commentTime { font-size: 0.75rem; color: rgba(160,160,192,0.5); }
+@media (max-width: 600px) { .container { padding: 16px; } .title { font-size: 1.5rem; } .header { padding: 12px 16px; } }

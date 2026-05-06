@@ -1,0 +1,74 @@
+[
+  {
+    "_id": "69eb1b5688bbb8e12e538dfa",
+    "name": "Admin User",
+    "email": "admin@tripod.com",
+    "role": "admin"
+  },
+  {
+    "_id": "69eb1b5688bbb8e12e538dfc",
+    "name": "John Doe",
+    "email": "john@example.com",
+    "role": "user"
+  },
+  {
+    "_id": "69eb1b5788bbb8e12e538dfe",
+    "name": "Jane Smith",
+    "email": "jane@example.com",
+    "role": "user"
+  },
+  {
+    "_id": "69eb1b5788bbb8e12e538e00",
+    "name": "Mike Johnson",
+    "email": "mike@example.com",
+    "role": "user"
+  },
+  {
+    "_id": "69eb1b5788bbb8e12e538e02",
+    "name": "Sarah Williams",
+    "email": "sarah@example.com",
+    "role": "user"
+  },
+  {
+    "_id": "69eb1b5888bbb8e12e538e04",
+    "name": "David Brown",
+    "email": "david@example.com",
+    "role": "user"
+  },
+  {
+    "_id": "69eb1b5888bbb8e12e538e06",
+    "name": "Emily Davis",
+    "email": "emily@example.com",
+    "role": "user"
+  },
+  {
+    "_id": "69eb1b5888bbb8e12e538e08",
+    "name": "Chris Martinez",
+    "email": "chris@example.com",
+    "role": "user"
+  },
+  {
+    "_id": "69eb1b5988bbb8e12e538e0a",
+    "name": "Lisa Anderson",
+    "email": "lisa@example.com",
+    "role": "user"
+  },
+  {
+    "_id": "69eb1b995ea54678f0dc6475",
+    "name": "sakshi singh",
+    "email": "sakshisinghh@gmail.com",
+    "role": "user"
+  },
+  {
+    "_id": "69eb1e177929917290a2beeb",
+    "name": "Parth Sardana",
+    "email": "parthsardana00@gmail.com",
+    "role": "user"
+  },
+  {
+    "_id": "69eb214dfeeb3dd4fc59f0a7",
+    "name": "Sakshi",
+    "email": "sakshisingh1@gmail.com",
+    "role": "user"
+  }
+]

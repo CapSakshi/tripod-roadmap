@@ -1,0 +1,476 @@
+.page {
+  min-height: 100vh;
+  background: var(--bg-primary);
+}
+
+.main {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 36px 24px 80px;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 64px);
+}
+
+.back {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-bottom: 28px;
+  transition: var(--transition);
+  padding: 6px 0;
+}
+
+.back:hover { color: var(--text-primary); }
+
+/* Shared card */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: 32px;
+  animation: fadeIn 0.25s ease;
+}
+
+/* Intro */
+.introIcon {
+  font-size: 48px;
+  margin-bottom: 16px;
+  display: block;
+  text-align: center;
+}
+
+.introTitle {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-align: center;
+  margin-bottom: 8px;
+  letter-spacing: -0.3px;
+}
+
+.introDesc {
+  font-size: 15px;
+  color: var(--text-secondary);
+  text-align: center;
+  margin-bottom: 28px;
+  line-height: 1.6;
+}
+
+.pastResults {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  margin-bottom: 24px;
+}
+
+.pastTitle {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+}
+
+.pastList { display: flex; flex-direction: column; gap: 8px; }
+
+.pastItem {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+}
+
+.pastDate { color: var(--text-muted); }
+.pastScore { font-weight: 600; }
+
+.introStats {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.introStat { text-align: center; }
+
+.introStatNum {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.5px;
+}
+
+.introStatLabel {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 3px;
+}
+
+.startBtn {
+  width: 100%;
+  background: var(--accent);
+  color: #0f1115;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 12px;
+  border-radius: var(--radius);
+  transition: var(--transition);
+}
+
+.startBtn:hover {
+  background: var(--accent-hover);
+}
+
+/* Quiz */
+.quizWrap {}
+
+.quizProgress {
+  margin-bottom: 20px;
+}
+
+.quizProgressInfo {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.quizBar {
+  height: 6px;
+  background: var(--bg-card);
+  border-radius: 3px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.quizBarFill {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 3px;
+  transition: width 0.4s ease;
+}
+
+.qNum {
+  display: inline-flex;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--accent);
+  background: var(--accent-glow);
+  border: 1px solid rgba(245, 158, 11, 0.15);
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.question {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 24px;
+  line-height: 1.4;
+  letter-spacing: -0.3px;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  text-align: left;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.option:hover {
+  border-color: var(--border-light);
+  background: var(--bg-card-hover);
+}
+
+.optionSelected {
+  border-color: var(--accent) !important;
+  background: var(--accent-glow) !important;
+}
+
+.optionLetter {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-muted);
+  flex-shrink: 0;
+  transition: var(--transition);
+}
+
+.optionSelected .optionLetter {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #0f1115;
+}
+
+.optionText {
+  flex: 1;
+  font-size: 15px;
+  color: var(--text-primary);
+}
+
+.optionCheck {
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.quizActions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.quizHint {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.nextBtn {
+  background: var(--accent);
+  color: #0f1115;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: var(--radius);
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 120px;
+  justify-content: center;
+  min-height: 40px;
+}
+
+.nextBtn:hover:not(:disabled) {
+  background: var(--accent-hover);
+}
+
+.nextBtn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+/* Result */
+.resultWrap {}
+
+.resultHeader {
+  text-align: center;
+  margin-bottom: 32px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--border);
+}
+
+.resultEmoji {
+  font-size: 52px;
+  margin-bottom: 12px;
+}
+
+.resultTitle {
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+  letter-spacing: -0.5px;
+}
+
+.resultScore {
+  font-family: var(--font-display);
+  font-size: 48px;
+  font-weight: 800;
+  letter-spacing: -2px;
+  margin-bottom: 4px;
+}
+
+.resultPct {
+  font-size: 18px;
+  color: var(--text-muted);
+  margin-bottom: 14px;
+}
+
+.resultBadge {
+  display: inline-flex;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 5px 16px;
+  border-radius: 20px;
+  border: 1px solid;
+}
+
+.pass {
+  color: var(--success);
+  background: var(--success-bg);
+  border-color: rgba(34, 197, 94, 0.3);
+}
+
+.fail {
+  color: var(--danger);
+  background: rgba(239, 68, 68, 0.08);
+  border-color: rgba(239, 68, 68, 0.3);
+}
+
+/* Review */
+.reviewTitle {
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+}
+
+.reviewList { display: flex; flex-direction: column; gap: 12px; margin-bottom: 28px; }
+
+.reviewItem {
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  padding: 14px 16px;
+  overflow: hidden;
+}
+
+.reviewCorrect { border-left: 3px solid var(--success); }
+.reviewWrong { border-left: 3px solid var(--danger); }
+
+.reviewQ {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.reviewNum {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.reviewIcon {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.reviewCorrect .reviewIcon { color: var(--success); }
+.reviewWrong .reviewIcon { color: var(--danger); }
+
+.reviewQuestion {
+  font-size: 14px;
+  color: var(--text-primary);
+  font-weight: 500;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.reviewAnswers { display: flex; flex-direction: column; gap: 4px; }
+
+.reviewOpt {
+  font-size: 13px;
+  color: var(--text-muted);
+  padding: 6px 10px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.reviewOptCorrect {
+  background: var(--success-bg);
+  color: #86efac;
+}
+
+.reviewOptWrong {
+  background: rgba(239, 68, 68, 0.08);
+  color: #fca5a5;
+}
+
+.reviewLabel {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--success);
+  background: var(--success-bg);
+  padding: 1px 8px;
+  border-radius: 20px;
+  margin-left: auto;
+}
+
+.reviewLabelWrong {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--danger);
+  background: rgba(239, 68, 68, 0.08);
+  padding: 1px 8px;
+  border-radius: 20px;
+  margin-left: auto;
+}
+
+.resultActions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.retryBtn {
+  flex: 1;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  font-size: 15px;
+  font-weight: 600;
+  padding: 12px;
+  border-radius: var(--radius);
+  transition: var(--transition);
+  min-height: 48px;
+}
+
+.retryBtn:hover {
+  border-color: var(--border-light);
+  background: var(--bg-card-hover);
+}
+
+.roadmapBtn {
+  flex: 1;
+  background: var(--accent);
+  color: #0f1115;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px;
+  border-radius: var(--radius);
+  transition: var(--transition);
+  min-height: 44px;
+}
+
+.roadmapBtn:hover {
+  background: var(--accent-hover);
+}
