@@ -5,10 +5,9 @@
   "main": "index.js",
   "scripts": {
     "dev": "vite",
-    "start": "tsx src/index.ts",
-    "build": "tsc && vite build",
+    "start": "node dist/server.js",
+    "build": "tsc src/server.ts --outDir dist --module esnext --target esnext --moduleResolution bundler --allowSyntheticDefaultImports --esModuleInterop --lib esnext,dom,es2020 --skipLibCheck --noImplicitAny false --ignoreConfig && vite build",
     "preview": "vite preview --port $PORT --host",
-    "serve": "node dist/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
